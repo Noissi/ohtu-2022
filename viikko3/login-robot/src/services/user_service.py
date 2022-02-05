@@ -46,6 +46,5 @@ class UserService:
                 raise UserInputError("Username is already in use")
 
         matchObj = re.match("^[a-z]*$", password)
-        print(matchObj)
         if matchObj or len(password) < 8:
             raise UserInputError("Invalid password")
