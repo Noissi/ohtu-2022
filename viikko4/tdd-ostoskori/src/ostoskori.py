@@ -14,7 +14,7 @@ class Ostoskori:
     def hinta(self):
         # kertoo korissa olevien ostosten yhteenlasketun hinnan
         ostokset = list(self._ostokset.values())
-        hinta = map(lambda t: t.hinta, ostokset)
+        hinta = map(lambda t: t.hinta(), ostokset)
         return sum(hinta)
 
     def lisaa_tuote(self, lisattava: Tuote):
